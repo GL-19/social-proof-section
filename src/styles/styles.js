@@ -1,28 +1,6 @@
 import styled from "styled-components";
-
-export const Main = styled.main`
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-
-	padding: 50px 0;
-
-	@media screen and (min-width: 850px) {
-		width: 100vw;
-		height: 100vh;
-		padding: 100px 150px;
-
-		display: grid;
-		grid-template-columns: 420px 600px;
-		grid-template-rows: auto auto;
-		grid-template-areas:
-			"text ratings"
-			"cards cards";
-
-		justify-content: center;
-		align-content: center;
-	}
-`;
+import { RatingWrapper } from "../components/Rating/styles";
+import { CardWrapper } from "../components/Card/styles";
 
 export const TextWrapper = styled.section`
 	padding: 0 20px;
@@ -75,11 +53,11 @@ export const RatingsWrapper = styled.section`
 		align-items: flex-end;
 		column-gap: 15px;
 
-		& section:nth-child(1) {
+		& ${RatingWrapper}:nth-child(1) {
 			margin-right: 100px;
 		}
 
-		& section:nth-child(2) {
+		& ${RatingWrapper}:nth-child(2) {
 			margin-right: 50px;
 		}
 	}
@@ -103,12 +81,36 @@ export const CardsWrapper = styled.section`
 		align-self: flex-start;
 		gap: 30px;
 
-		& section:nth-child(1) {
+		& ${CardWrapper}:nth-child(1) {
 			margin-bottom: 50px;
 		}
 
-		& section:nth-child(2) {
+		& ${CardWrapper}:nth-child(2) {
 			margin-bottom: 25px;
 		}
+	}
+`;
+
+export const Main = styled.main`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding: 50px 0;
+
+	@media screen and (min-width: 850px) {
+		width: 100vw;
+		height: 100vh;
+		padding: 100px 150px;
+
+		display: grid;
+		grid-template-columns: 420px 600px;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			"text ratings"
+			"cards cards";
+
+		justify-content: center;
+		align-content: center;
 	}
 `;
