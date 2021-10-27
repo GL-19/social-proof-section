@@ -5,14 +5,29 @@ export const Main = styled.main`
 	flex-direction: column;
 	align-items: center;
 
-	@media screen and (max-width: 850px) {
-		padding: 50px 0;
+	padding: 50px 0;
+
+	@media screen and (min-width: 850px) {
+		width: 100vw;
+		height: 100vh;
+		padding: 100px 150px;
+
+		display: grid;
+		grid-template-columns: 420px 600px;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			"text ratings"
+			"cards cards";
+
+		justify-content: center;
+		align-content: center;
 	}
 `;
 
 export const TextWrapper = styled.section`
 	padding: 0 20px;
 	margin: 20px 0;
+	grid-area: text;
 
 	h1 {
 		text-align: center;
@@ -28,27 +43,72 @@ export const TextWrapper = styled.section`
 		text-align: center;
 		color: hsl(303, 10%, 53%);
 	}
+
+	@media screen and (min-width: 850px) {
+		padding: 0;
+
+		p {
+			text-align: start;
+		}
+
+		h1 {
+			text-align: start;
+
+			font-size: 38px;
+			line-height: 38px;
+			margin-bottom: 15px;
+		}
+	}
 `;
 
 export const RatingsWrapper = styled.section`
-	@media screen and (max-width: 850px) {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 15px;
 
-		margin: 20px 0;
-		gap: 15px;
+	margin: 20px 0;
+
+	grid-area: ratings;
+
+	@media screen and (min-width: 850px) {
+		align-items: flex-end;
+		column-gap: 15px;
+
+		& section:nth-child(1) {
+			margin-right: 100px;
+		}
+
+		& section:nth-child(2) {
+			margin-right: 50px;
+		}
 	}
 `;
 
 export const CardsWrapper = styled.section`
-	@media screen and (max-width: 850px) {
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
 
-		gap: 15px;
-		margin: 30px 0;
+	gap: 15px;
+	margin: 30px 0;
+
+	grid-area: cards;
+
+	@media screen and (min-width: 850px) {
+		flex-direction: row;
+		justify-content: space-between;
+
+		align-self: flex-start;
+		gap: 30px;
+
+		& section:nth-child(1) {
+			margin-bottom: 50px;
+		}
+
+		& section:nth-child(2) {
+			margin-bottom: 25px;
+		}
 	}
 `;

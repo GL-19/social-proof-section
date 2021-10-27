@@ -10,5 +10,7 @@ export const GlobalStyle = createGlobalStyle`
   body {
     background-color: hsl(0, 0%, 100%);
     font-family: 'Spartan', sans-serif;
+    min-height: 100vh;
+    min-width: 100vw;
   }
 `;

@@ -1,4 +1,4 @@
-import { CardWrapper, Name, Title } from "./styles";
+import { CardWrapper } from "./styles";
 
 export function Card({ name, review, photo }) {
 	return (

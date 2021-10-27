@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const CardWrapper = styled.div`
+export const CardWrapper = styled.section`
 	padding: 30px 25px;
 	width: 335px;
 	height: 240px;
