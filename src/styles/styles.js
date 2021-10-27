@@ -1,6 +1,12 @@
 import styled from "styled-components";
+
 import { RatingWrapper } from "../components/Rating/styles";
 import { CardWrapper } from "../components/Card/styles";
+
+import bgTopDesktop from "../images/bg-pattern-top-desktop.svg";
+import bgTopMobile from "../images/bg-pattern-top-mobile.svg";
+import bgBottomDesktop from "../images/bg-pattern-bottom-desktop.svg";
+import bgBottomMobile from "../images/bg-pattern-bottom-mobile.svg";
 
 export const TextWrapper = styled.section`
 	padding: 0 20px;
@@ -98,6 +104,8 @@ export const Main = styled.main`
 
 	padding: 50px 0;
 
+	background: url(${bgTopMobile}) top left no-repeat, url(${bgBottomMobile}) bottom right no-repeat;
+
 	@media screen and (min-width: 850px) {
 		width: 100vw;
 		height: 100vh;
@@ -112,5 +120,8 @@ export const Main = styled.main`
 
 		justify-content: center;
 		align-content: center;
+
+		background: url(${bgTopDesktop}) top left no-repeat,
+			url(${bgBottomDesktop}) center right no-repeat;
 	}
 `;
