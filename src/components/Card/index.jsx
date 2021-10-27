@@ -1,12 +1,14 @@
-import {} from "./styles";
+import { CardWrapper, Name, Title } from "./styles";
 
 export function Card({ name, review, photo }) {
 	return (
-		<div>
-			<img src={photo} alt={name} />
-			<p>{name}</p>
-			<p>Verified Buyer</p>
+		<CardWrapper>
+			<div>
+				<img src={photo} alt={name} />
+				<p>{name}</p>
+				<span>Verified Buyer</span>
+			</div>
 			<p>{review}</p>
-		</div>
+		</CardWrapper>
 	);
 }

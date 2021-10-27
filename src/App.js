@@ -1,12 +1,12 @@
 import { Rating, Card } from "./components";
-import {} from "./styles/styles";
+import { Main } from "./styles/styles";
 import Colton from "./images/image-colton.jpg";
 import Irene from "./images/image-irene.jpg";
 import Anne from "./images/image-anne.jpg";
 
 function App() {
 	return (
-		<main>
+		<Main>
 			<h1>10,000+ of our users love our products.</h1>
 			<p>
 				We only provide great products combined with excellent customer service. See what our
@@ -35,7 +35,7 @@ function App() {
 				review=' "Put an order with this company and can only praise them for the very high
       standard. Will definitely use them again and recommend them to everyone!"'
 			/>
-		</main>
+		</Main>
 	);
 }
 
