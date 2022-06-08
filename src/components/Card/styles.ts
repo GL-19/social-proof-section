@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
 export const CardWrapper = styled.section`
-	padding: 30px 25px;
-	width: 335px;
-	height: 240px;
+	padding: 2rem 1.5rem;
+	width: 21rem;
+	height: 15rem;
 
 	display: flex;
 	flex-direction: column;
@@ -14,21 +14,21 @@ export const CardWrapper = styled.section`
 
 	color: hsl(0, 0%, 100%);
 	font-family: "Spartan", sans-serif;
-	font-size: 14px;
+	font-size: 0.875rem;
 
 	div {
 		display: grid;
-		grid-template-columns: 40px auto;
+		grid-template-columns: 2.5rem auto;
 		grid-template-rows: 1fr 1fr;
 		grid-template-areas:
 			"photo name"
 			"photo description";
 		align-items: center;
-		column-gap: 25px;
+		column-gap: 1.5rem;
 
 		img {
-			width: 45px;
-			height: 45px;
+			width: 2.8rem;
+			height: 2.8rem;
 
 			border-radius: 50%;
 			grid-area: photo;

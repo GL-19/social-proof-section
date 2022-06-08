@@ -1,12 +1,13 @@
 import styled from "styled-components";
+import { mediaQuery } from "../../styles/GlobalStyle";
 
 export const RatingWrapper = styled.section`
 	background-color: hsl(300, 24%, 96%);
 	border-radius: 10px;
 
-	width: 335px;
-	height: 80px;
-	padding: 10px;
+	width: 21rem;
+	height: 5rem;
+	padding: 0.625rem;
 
 	display: flex;
 	flex-direction: column;
@@ -15,7 +16,7 @@ export const RatingWrapper = styled.section`
 
 	div {
 		display: flex;
-		gap: 5px;
+		gap: 0.3125rem;
 	}
 	p {
 		color: hsl(300, 43%, 22%);
@@ -23,15 +24,15 @@ export const RatingWrapper = styled.section`
 		font-weight: 700;
 	}
 
-	@media screen and (min-width: 850px) {
-		padding: 10px 40px;
+	@media screen and (min-width: ${mediaQuery.desktop}) {
+		padding: 0.625rem 2.5rem;
 
 		display: flex;
 		flex-direction: row;
 		justify-content: flex-start;
-		gap: 25px;
+		gap: 2rem;
 
-		width: 500px;
-		height: 50px;
+		width: 31.25rem;
+		height: 3.125rem;
 	}
 `;

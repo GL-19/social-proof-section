@@ -7,41 +7,43 @@ import bgTopDesktop from "../images/bg-pattern-top-desktop.svg";
 import bgTopMobile from "../images/bg-pattern-top-mobile.svg";
 import bgBottomDesktop from "../images/bg-pattern-bottom-desktop.svg";
 import bgBottomMobile from "../images/bg-pattern-bottom-mobile.svg";
+import { mediaQuery } from "./GlobalStyle";
 
 export const TextWrapper = styled.section`
-	padding: 0 20px;
-	margin: 20px 0;
+	max-width: 40rem;
+	padding: 0 1.25rem;
+	margin: 1.25rem 0;
 	grid-area: text;
+	padding: 0;
 
 	h1 {
-		text-align: center;
 		color: hsl(300, 43%, 22%);
-		font-size: 32px;
+		font-size: 2rem;
 		font-weight: 700;
-		line-height: 32px;
 
-		margin-bottom: 30px;
+		line-height: 2rem;
+		text-align: start;
+
+		margin-bottom: 1rem;
 	}
 
 	p {
-		text-align: center;
+		text-align: start;
 		color: hsl(303, 10%, 53%);
 	}
 
-	@media screen and (min-width: 850px) {
-		padding: 0;
-
+	@media screen and (max-width: ${mediaQuery.desktop}) {
+		h1,
 		p {
-			text-align: start;
+			text-align: center;
 		}
-
 		h1 {
-			text-align: start;
-
-			font-size: 38px;
-			line-height: 38px;
-			margin-bottom: 15px;
+			margin-bottom: 2rem;
 		}
+	}
+
+	@media screen and (max-width: ${mediaQuery.mobile}) {
+		max-width: 20rem;
 	}
 `;
 
@@ -49,22 +51,22 @@ export const RatingsWrapper = styled.section`
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: 15px;
+	gap: 1rem;
 
-	margin: 20px 0;
+	margin: 1.25rem 0;
 
 	grid-area: ratings;
 
-	@media screen and (min-width: 850px) {
+	@media screen and (min-width: ${mediaQuery.desktop}) {
 		align-items: flex-end;
-		column-gap: 15px;
+		column-gap: 1rem;
 
 		& ${RatingWrapper}:nth-child(1) {
-			margin-right: 100px;
+			margin-right: 6.25rem;
 		}
 
 		& ${RatingWrapper}:nth-child(2) {
-			margin-right: 50px;
+			margin-right: 3rem;
 		}
 	}
 `;
@@ -75,24 +77,24 @@ export const CardsWrapper = styled.section`
 	justify-content: flex-start;
 	align-items: center;
 
-	gap: 15px;
-	margin: 30px 0;
+	gap: 1rem;
+	margin: 2rem 0;
 
 	grid-area: cards;
 
-	@media screen and (min-width: 850px) {
+	@media screen and (min-width: ${mediaQuery.desktop}) {
 		flex-direction: row;
 		justify-content: space-between;
 
 		align-self: flex-start;
-		gap: 30px;
+		gap: 2rem;
 
 		& ${CardWrapper}:nth-child(1) {
-			margin-bottom: 50px;
+			margin-bottom: 3rem;
 		}
 
 		& ${CardWrapper}:nth-child(2) {
-			margin-bottom: 25px;
+			margin-bottom: 1.33rem;
 		}
 	}
 `;
@@ -102,14 +104,15 @@ export const Main = styled.main`
 	flex-direction: column;
 	align-items: center;
 
-	padding: 50px 0;
+	padding: 3rem 0;
 
-	background: url(${bgTopMobile}) top left no-repeat, url(${bgBottomMobile}) bottom right no-repeat;
+	background: url(${bgTopMobile}) top left no-repeat,
+		url(${bgBottomMobile}) bottom right no-repeat;
 
-	@media screen and (min-width: 850px) {
+	@media screen and (min-width: ${mediaQuery.desktop}) {
 		width: 100vw;
 		height: 100vh;
-		padding: 100px 150px;
+		padding: 6.25rem 9.5rem;
 
 		display: grid;
 		grid-template-columns: 420px 600px;
